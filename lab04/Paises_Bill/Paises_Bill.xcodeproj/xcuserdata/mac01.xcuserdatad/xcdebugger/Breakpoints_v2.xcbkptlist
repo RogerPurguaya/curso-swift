@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Paises_Bill/ViewController2.swift"
+            timestampString = "545070224.366984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Paises_Bill/ViewController2.swift"
+            timestampString = "545075914.18762"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "ViewController2"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Paises_Bill.ViewController2.nombrePaisRecibido.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Paises_Bill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac01/Desktop/Ios%204%20Bill/Paises_Bill/Paises_Bill/ViewController2.swift"
+                  timestampString = "545075915.249891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Paises_Bill.ViewController2.nombrePaisRecibido.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Paises_Bill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac01/Desktop/Ios%204%20Bill/Paises_Bill/Paises_Bill/ViewController2.swift"
+                  timestampString = "545075915.251895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Paises_Bill.ViewController2.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Paises_Bill.ViewController2"
+                  moduleName = "Paises_Bill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac01/Desktop/Ios%204%20Bill/Paises_Bill/Paises_Bill/ViewController2.swift"
+                  timestampString = "545075915.253846"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "945">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Paises_Bill.ViewController2.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Paises_Bill.ViewController2&gt;"
+                  moduleName = "Paises_Bill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac01/Desktop/Ios%204%20Bill/Paises_Bill/Paises_Bill/ViewController2.swift"
+                  timestampString = "545075915.255605"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "816">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
