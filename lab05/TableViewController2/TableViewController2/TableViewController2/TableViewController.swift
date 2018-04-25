@@ -15,13 +15,14 @@ import UIKit
 		
 }*/
 
+
 class TableViewController: UITableViewController {
     
     var arregloNumeros:[String] = ["1","2","3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView.isEditing = true
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         // Uncomment the following line to preserve selection between presentations

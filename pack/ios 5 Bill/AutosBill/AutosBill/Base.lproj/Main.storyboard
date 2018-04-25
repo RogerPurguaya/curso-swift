@@ -22,18 +22,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3q-os-Zz0" id="SUV-lY-ScR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="49y-eg-5Lk">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XoB-rH-ulG">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -58,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sh-E8-gAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="68.815592203898049"/>
+            <point key="canvasLocation" x="1031" y="69"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="igA-CN-r0T">
@@ -81,11 +81,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ki-FC-aV4" id="r0x-Dm-dx9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W8H-EK-CUk">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrA-hh-f44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.8" y="68.815592203898049"/>
+            <point key="canvasLocation" x="2046" y="-90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fb5-nG-tRT">
