@@ -80,10 +80,10 @@
 		C8B7A87820AA334C00267ED6 /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				C8B7A87D20AA334C00267ED6 /* Main.storyboard */,
 				C8B7A88B20AA352100267ED6 /* GoogleService-Info.plist */,
 				C8B7A87920AA334C00267ED6 /* AppDelegate.swift */,
 				C8B7A87B20AA334C00267ED6 /* iniciarSesionViewController.swift */,
-				C8B7A87D20AA334C00267ED6 /* Main.storyboard */,
 				C8B7A88020AA334D00267ED6 /* Assets.xcassets */,
 				C8B7A88220AA334D00267ED6 /* LaunchScreen.storyboard */,
 				C8B7A88520AA334D00267ED6 /* Info.plist */,
