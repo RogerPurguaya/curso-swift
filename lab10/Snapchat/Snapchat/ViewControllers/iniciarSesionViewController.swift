@@ -13,9 +13,7 @@ import FirebaseAuth
 class iniciarSesionViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +24,37 @@ class iniciarSesionViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text! , password: passwordTextField.text!) {
             (user, error) in print("Intentando iniciar sesión")
             if error != nil {
-                print("Se presentó 3el siguiente error: \(error)")
-                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: {(user, error) in
-                    print("Intentando crear usuario...")
-                    if error != nil {
-                        print("Se presentó 3el siguiente error al intentar crear el usuario: \(error)")
-                    }else{
-                        print("El usuario fue creado correctamente")
-                        Database.database().reference().child("usuarios").child(user!.user.uid).child("email").setValue(user!.user.email)
-                        self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
-                    }
-                })
+                //Mostramnos una alerta con un titulo de error y un mensaje:
+                self.showAlert("Error.", "Usuario y/o contraseña incorrectos.")
             }else{
                 print("Inicio de sesión exitoso")
-                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+                //Mostramnos una alerta con un titulo de exito y un mensaje:
+                self.showAlert("Correcto.", "Inicio de sesión exitoso")
             }
         }
+    }
+    
+    //boton registrarse:
+    @IBAction func registrarTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "registrarsesegue", sender: nil)
+    }
+    
+    //Creamos una función para mostrar las alertas (recibe como parámetros el título y el mensaje se la alerta)
+    func showAlert (_ title: String,_ message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        //Si el título es un error nos mantenemos en la misma vista.
+        if title == "Error." {
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        }else{
+            //Si no hay error entonces llamamos al handler que nos redirecciona a la siguiente vista:
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: handlerView))
+        }
+        self.present(alert, animated: true)
+    }
+    
+    //Función handler de las alertas para redireccionar a la siguiente view:
+    func handlerView(alert: UIAlertAction!) {
+        self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
     }
     
 }
