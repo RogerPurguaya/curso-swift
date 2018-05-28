@@ -17,11 +17,13 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var elegirContactoBoton: UIButton!
     var imagePicker = UIImagePickerController()
+    var imagenID =  NSUUID().uuidString
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        elegirContactoBoton.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
@@ -29,17 +31,24 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
+        elegirContactoBoton.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
-        
-        
     }
 
     @IBAction func camaraTapped(_ sender: Any) {
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func mediaTapped(_ sender: Any) {
+        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.allowsEditing = false
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     
     @IBAction func elegirContactoTapped(_ sender: Any) {
@@ -47,21 +56,33 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         elegirContactoBoton.isEnabled = false
         let imagenesFolder = Storage.storage().reference().child("imagenes")
         let imagenData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
-        imagenesFolder.child("\(NSUUID().uuidString).jpg").putData(imagenData, metadata: nil, completion: {(metadata, error) in
+        let imagen = imagenesFolder.child("\(imagenID).jpg")
+        imagen.putData(imagenData, metadata: nil) {(metadata, error) in
             if error != nil {
                 self.mostrarAlerta(title: "Error", message: "Se Produjo un error al subior la imagen", action: "Cancelar")
                 self.elegirContactoBoton.isEnabled = true
-                print("Ocurrió un error al subir la imagen. \(error)")
+                //print("Ocurrió un error al subir la imagen. \(error)")
+                return
             }else{
-                //self.mostrarAlerta(title: "Exitoso", message: "Correctamente subida", action: "OK")
-                //self.elegirContactoBoton.isEnabled = true
-                self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: nil)
+                imagen.downloadURL(completion: { (url, error) in
+                    guard let enlaceURL = url else {
+                        self.mostrarAlerta(title: "Error.", message: "Se produjo un error al obtener la imagen", action: "Cancelar")
+                        self.elegirContactoBoton.isEnabled = true
+                        return
+                    }
+                    
+                    self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: url?.absoluteString)
+                })
             }
-        })
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let siguienteVC = segue.destination as! ElegirUsuarioViewController
+        siguienteVC.imagenURL = sender as! String
+        siguienteVC.descrip = descripcionTextField.text!
+        siguienteVC.imagenID = imagenID
     }
     
     func mostrarAlerta (title: String, message: String, action: String){
